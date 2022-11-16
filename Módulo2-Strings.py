@@ -50,3 +50,10 @@ print(len(string_extensa)) # A função "len()" mostra o tamanho da string.
 
 # ------------------ENCADEAMNTO DE FUNÇÕES ---------------------------
 print(' te;x;;to  '.strip().replace(';', '').center(25,'*').upper())
+
+
+# ---------------- ÍNDICE DE STRINGS ------------------------------
+nome = 'João Paulo Lima'
+print(nome[3]) #retorna o caractere correspondente ao índice 3.
+print(nome[-1]) #Indexação negativa que retorna o indice em ordem contrária, nesse caso retornará o último elemento da string.
+print(nome[-1] == 'a') #verifica se o último elemento da string é um "a".
