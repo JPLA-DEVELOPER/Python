@@ -1,3 +1,4 @@
+
 #list = []
 lista =[0,"str", 5,5, []] #Declara e preeche a lista com tipos de dados variados.
 print(lista) #mostar a lista inteira.
@@ -84,5 +85,33 @@ print(f'A nova lista é: {sacola}') #Mostra a lista com os novos elementos.
 sacola.insert(0, 'milho') #Insere um novo elemento numa posição específica.
 print(f'A nova lista é: {sacola}') #Mostra a lista com os novos elementos.
 
+#Método REMOVE(objeto)
+sacola.remove('Macarrão') #Remove o item Macarrão.
+print(f'A nova lista é: {sacola}') #Mostra a lista com os novos elementos.
 
 
+#Método POP(índice)
+sacola.pop(3) #Remove o item da posição desejada da lista e o retorna. Caso o índice não seja especificado, retorna o último elemento.
+print(f'A nova lista é: {sacola}') 
+
+#Método CLEAR()
+#sacola.clear() #Remove todos os elementos da lista.
+#print(f'A nova lista é: {sacola}')
+
+#método INDEX(valor[comeco, fim])
+print(sacola.index('Café')) #Retorna o índice do primeiro elemento do vetor especificado.
+print(f'Lista após a chamada do método INDEX(): {sacola}')
+
+
+#Método COUNT(valor)
+print(sacola.count('Café')) #Conta o número de ocorrências do valor especificado na lista.
+
+
+#Método SORT(chave, reverso)
+sacola.sort(reverse =True) #Ordena os ítens da lista. Parâmetros adicionais podem ser adicionados para customizar.
+
+
+#Método REVERSE()
+
+
+#Método COPY()
