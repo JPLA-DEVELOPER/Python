@@ -69,5 +69,19 @@ computador.popitem() #Exclui sempre o último elemento do dicionário.
 print(f'Computador 05: {computador}')
 
 #--------------Função CLEAR ----------------------
-computador.clear() #Exclui todos os elementos do dicionário.
-print(f'Computador 06: {computador}')
+#computador.clear() #Exclui todos os elementos do dicionário.
+#print(f'Computador 06: {computador}')
+  
+
+  #--------------Função COPY -------------------------
+itens = computador.copy()#Copia o dicionário inteiro.
+print(f'Itens_computador_copiado: {itens}')
+
+#--------------Função KEYS ---------------------------
+chave = computador.keys() #Retorna todas as chaves em forma de lista 
+print(f'Chaves: {chave}')
+
+#-------------Função VALUES ---------------------------
+valores = computador.values()
+print(f'Valores: {valores} ')
+
