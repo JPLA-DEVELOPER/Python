@@ -98,20 +98,23 @@ print(f'A nova lista é: {sacola}')
 #sacola.clear() #Remove todos os elementos da lista.
 #print(f'A nova lista é: {sacola}')
 
-#método INDEX(valor[comeco, fim])
+#método INDEX(valor[comeco, fim]) #Os parâmetros permitem que seja definido um intervalo de valores para a busca.
 print(sacola.index('Café')) #Retorna o índice do primeiro elemento do vetor especificado.
 print(f'Lista após a chamada do método INDEX(): {sacola}')
 
 
 #Método COUNT(valor)
-print(sacola.count('Café')) #Conta o número de ocorrências do valor especificado na lista.
-
+sacola.count('Café') #Conta o número de ocorrências do valor especificado na lista.
+print(f'Lista após a chamada do método COUNT(): {sacola}')
 
 #Método SORT(chave, reverso)
 sacola.sort(reverse =True) #Ordena os ítens da lista. Parâmetros adicionais podem ser adicionados para customizar.
-
+print(f'Lista após a chamada do método SORT(): {sacola}')
 
 #Método REVERSE()
-
+sacola.reverse() #Reverte os elementos da lista.
+print(f'Lista após a chamada do método REVERSE(): {sacola}')
 
 #Método COPY()
+copia_sacola = sacola.copy() #Faz uma cópia dos elementos da lista na mesma ordem
+print(f'Lista após a chamada do método COPY(): {copia_sacola}')
