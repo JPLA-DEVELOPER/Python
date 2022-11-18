@@ -78,10 +78,31 @@ itens = computador.copy()#Copia o dicionário inteiro.
 print(f'Itens_computador_copiado: {itens}')
 
 #--------------Função KEYS ---------------------------
-chave = computador.keys() #Retorna todas as chaves em forma de lista 
+chave = computador.keys() #Retorna todas as CHAVES( não os valores)) em forma de lista.
 print(f'Chaves: {chave}')
 
+#----------ITENS
+itens = computador.items() #Retorna os pares chave(chave e valor): valor em formato de lista.
+print(f' Itens: {itens}')
+
 #-------------Função VALUES ---------------------------
-valores = computador.values()
-print(f'Valores: {valores} ')
+valores = computador.values() #Retorna todos os VALORES(não a chave) em formato de lista.
+for valor in valores: #Percorre toda a lista e exibe os valores.
+  print(f'\tValores: {valor} ')
+
+
+#----------SETDEFAULT------------------
+#Isere a chave com o valor passado SE a chave não estiver presente no dicionário e
+#retorna o valor da chave SE a chave já estiver presente no dicionário.
+computador.setdefault('ssd', 'SSD Kink 1T') #Primeiro parâmetro é a chave a ser procurada e o segundo o valor a ser inserido se a chave ainda não existir no dicionário.
+print(f' Computador: {computador}')
+
+# ------FROMKEYS -----------------------------
+
+chavess = ['Mãe', 'Pai', 'Filho', 'Filha']
+valorr = 0 #Valor que vai ser atribuido a todas as chaves.
+
+jogo = dict.fromkeys(chavess, valorr) #Cria um dicionário a partir de lista de chaves e valores.
+print(F'Jogo: {jogo}')
+
 
