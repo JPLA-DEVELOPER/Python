@@ -69,12 +69,19 @@ print('\n')
 intersecao_letras_vogais = letras.intersection() #Pega só os itens que estão em ambos os conjuntos.
 print(f'Interseção_Letras_vogais: {intersecao_letras_vogais}')
 
+#---Também pode mostrar os resultados fazendo com o operador de interseção----
+# & - interseção.
+print(f'Interseção com operador: {letras & vogais}') #Mostra o resultado.
+
 print('\n')
 
 #--------UNIÃO -----------------
 uniao_letras_vogais = letras.union() #pega todos os elementos dos dois conjuntos.
 print(f'União_Letras_vogais: {uniao_letras_vogais}')
 
+#---Também pode mostrar os resultados fazendo com o operador de união----
+# | - união.   
+print(f'União com operador: {letras | vogais}') #Mostra o resultado.
 print('\n')
 
 #------DIFERENÇA ---------------
@@ -84,6 +91,9 @@ diferenca2_letras_vogais = vogais.difference(letras) #Mostra todos
 print(f'Letras - vogais: {diferenca1_letras_vogais}')
 print(f'Vogais - letras: {diferenca2_letras_vogais}')
 
+#---Também pode mostrar os resultados fazendo com o operador da diferença simétrica----
+# ^ - diferença simétrica.
+print(f'Diferença com operador: {letras - vogais}') #Mostra o resultado.
 print('\n')
 
 #-------DIFERENÇA SIMÉTRICA ------------------
@@ -92,7 +102,14 @@ print('\n')
 simetrica_letras_vogais = letras.symmetric_difference(vogais)
 print(f'Simétrica: {simetrica_letras_vogais}')
 
+#---Também pode mostrar os resultados fazendo com o operador da diferença----
+# - - diferença.
+print(f'Diferença simétrica com operador: {letras ^ vogais}') #Mostra o resultado.
+
 print('\n')
 
-#-----------
-
+#--------------------MÉTODOS DE CONJUNTOS -------------------------
+print(F'Os conjuntos letras e vogais são separados: {letras.isdisjoint(vogais)}') #Verifica se são conjuntos disjuntos(separados, sem interseção)
+print(F'O conjunto letras pertence ao conjunto vogais : {letras.issubset(simetrica_letras_vogais)}') #Verifica se todos os elementos de um conjunto estão dentro de outro.
+print(F'O conjunto letras é um super conjunto de vogais: {letras.issuperset(vogais)}') #Verifica se um conjunto é um superset de outro.
+ 
