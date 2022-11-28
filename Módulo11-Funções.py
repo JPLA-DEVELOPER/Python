@@ -18,18 +18,31 @@ def fun2(valor_1, valor_2): #Declara a função
 resultado = fun2(10, 20) #Argumentos passados para a função calcular.
 print(resultado)
 
+
+
 #-----------------------------------------------------------------------------
-
-def calculo_media_mediana(notas): #função.
+print('\t----------------------NOVA FUNÇÃO--------------------------\n\t')
+def calculo_media_mediana(notas): #Declara a função.
     media = sum(notas)  / len(notas) #sum faz a soma do valores de uma lista, len conta a quantidade de valores da lista.
-    if len(notas) % 2 == 0:
+    if len(notas) % 2 == 0: #Se número pá de elementos.
+       # O pass permite  execução do if sem executar nada.
+        indice_central_menor = int(len(notas)/2-1) # Descobre o índice do menor elemento central.
+        indice_central_maior = int(len(notas)/2) #Descobre o índice do maior elemento central.
+        ponto_central_menor = notas[indice_central_menor] #Retorna para a variável o valor correspondente ao índice descoberto.
+        ponto_central_maior = notas[indice_central_maior] #Retorna para a variável o valor correspondente ao índice descoberto.
+
+        mediana = (ponto_central_menor + ponto_central_maior) / 2 #Descobre a mediana.
+        
+    else: #Se número ímpar de elementos.
+        notas_ordenadas = sorted(notas) #A função sorted ordena a lista em ordem crescente.
+        indice_mediana = int(len(notas)/2) #Tranforma para interio e divide por 2 para retornar a mediana.
+        mediana = notas_ordenadas[indice_mediana]
     
-    else:
-    notas_ordenadas = sorted(notas) #ordena a lista em ordem crescente.
-    indice_mediana = in(len(notas)/2)
-
-    return media
+    return media, mediana #Retorna esses valores para quem chamar a função.
 
 
-resultado = calculo_media_mediana([10,8,4]) #Passa como argumento para a função uma lista de notas.
-print(f'Média: {resultado}')
+
+
+resultado_media, resultado_mediana = calculo_media_mediana([10,8,4,9,5,2]) #Duas variáveis recebendo a função. Passa como argumento para a função uma lista de notas.
+print(f'Média: {resultado_media}\n Mediana: {resultado_mediana}')
+
