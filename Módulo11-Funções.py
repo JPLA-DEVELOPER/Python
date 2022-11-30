@@ -59,7 +59,7 @@ def funcao_com_argumentos(arg1, arg2, *args): #A notação *args permite adicion
     print(f'Args: {args}')
 
     
-funcao_com_argumentos(1,2,3,4,5)
+funcao_com_argumentos(1,2,3,4,5) #Mostra os valores na ordem definida aqui.
 
 
 print('-------------------------------------------')
@@ -73,3 +73,101 @@ def fun_soma(*numeros): #Cria uma função com infinitos parâmetros.
 
 resultado_soma = fun_soma(1,2,3,4) #Passa 4 argumentos para a função soma.
 print(f'Resultado da soma: {resultado_soma}')
+
+
+print('\n\t-------------------------------------------')
+def fun2_soma(maximo, *numeros): #Cria uma função com infinitos parâmetros, mas que vai obedecer um valor máximo definido dentro da função.
+    resultado = 0
+    numeros_somados= [] #Cria uma lista para guardar os valores somados.
+    
+    for numero in numeros: #percorre todos eles.
+        if(resultado + numero) > maximo:
+            break #Para a execução se a condição for satisfeita.
+
+        resultado +=numero #Soma com o próximo.
+        numeros_somados.append(numero) #Adiciona o número somada ao final da lista.
+
+    return resultado, numeros_somados #Retorna o resultado das somas e a lista de valores somados.
+
+
+resultado_soma2 = fun2_soma(100, 5,68,30,40) #Passa 5 argumentos para a função soma, sendo que o primeiro é o valor máximo.
+print(f'Resultado da soma: {resultado_soma2}')
+
+
+
+print('\n\t-----------------------------------PARÂMETROS NOMEADOS--------------------------------------------------------------')
+
+def monta_computador(cpu, memoria, hd, monitor):
+    print(f'O computaodr montado foi:')
+    print(f'CPU: {cpu}')
+    print(f'Memória: {memoria} Gb')
+    print(f'HD: {hd} TB')
+    print(f'Monitor: {monitor} '' ')
+
+
+monta_computador('core i7', monitor = 24, memoria = 16, hd = 1) #define(liga) cada argumento ao seu respectivo valor independente da posição. Pode misturar parâmetros posicionais com nmeados, desde que os posicionais venham antes dos nomeados.
+
+
+print('\n\t-----------------------------------PARÂMETRO COM VALOR PADRÃO--------------------------------------------------------------')
+
+def monta_computador(cpu, memoria, hd, monitor = 32): #define um valor padrão para o parâmetro monitor.
+    print(f'O computaodr montado foi:')
+    print(f'CPU: {cpu}')
+    print(f'Memória: {memoria} Gb')
+    print(f'HD: {hd} TB')
+    print(f'Monitor: {monitor} '' ')
+
+
+monta_computador('core i7', memoria = 16, hd = 1) #Não está parssando nenhum parâmetro para monitor e ele está pegando o valor padrão.
+
+
+
+print('\n\t-----------------------------------PARÂMETRO NOMEADOS NÃO DEFINIDOS--------------------------------------------------------------')
+#------------------------ORDEM: POSICIONAIS -> POSICIONAIS VARIAVEIS -> NOMEADOS -> NOMEADOS VARIAVÉIS 
+
+def monta_computador(cpu, memoria, hd, monitor = 32, **kwargs): #todos os argumentos nomeados vão cair aqui no parâmetro kwargs.
+    print(f'O computaodr montado foi:')
+    print(f'CPU: {cpu}')
+    print(f'Memória: {memoria} Gb')
+    print(f'HD: {hd} TB')
+   # print(f'Outros atributos: {kwargs} '' ')
+
+    for chave, valor in kwargs.items(): #Percorre os parâmetros peado cada chave e valor e imprime.
+        print(f'Atributo {chave} : {valor}')
+
+
+
+
+monta_computador('core i7', memoria = 16, hd = 1, webcam = 'Multilaser', teclado = 'LG') #Os cois últimos argumentos vão ser assados para o parâmetro não definido akwargs.
+
+
+#------------------------------------------------------------------------------------------------------------------
+
+print('---------------------------TYPE HINTS-----------------------------------')
+
+def aplica_baskhara(a: float, b: float, c: float) -> (float, float): #diz que quem jchamar a função deve esperar dois float como retorno.
+    delta = b ** 2 - 4 * a * c 
+    x_1 = (-b + ( delta ** 1/2) / (2 * a))
+    x_2 = (-b - ( delta ** 1/2) / (2 * a))
+
+    return x_1, x_2 #mutlipos retotnos.
+
+def aplica_desconto(produtos:dict, desconto: float) -> dict: #dict deixa claro que a vriável produtos é do tipo dicionário e descontodo tipo float. -> diz que a função retorna o tipo dicionário.
+    resultado = {}
+    for nome_produto, valor in produtos.items():
+        resultado[nome_produto] = (f'{valor*(1-desconto):.2f}') #calcula o desconto ara cada item do dicionário. retorna formatado com 2 casas decimais.
+
+    return resultado
+
+valores_produtos = { #Dicionário de itens.
+    'microondas': 497.99,
+    'computador': 3499.97,
+    'forno': 399.97
+
+}
+
+
+
+
+print(aplica_desconto(valores_produtos, 0.15)) #retorna os valores dos produtos presentes no dicionários com os descontos.
+print(aplica_baskhara(5.0, 15.0,-25.0))
