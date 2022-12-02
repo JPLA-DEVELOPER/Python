@@ -1,0 +1,2 @@
+Teste de escrita de texto em arquivo
+Texto anexado
