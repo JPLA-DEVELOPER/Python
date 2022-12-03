@@ -9,4 +9,4 @@ from operacoes.soma import soma_dois_numeros #faz a importação de uma função
 print(matematica.soma(1,2)) #Chama o função soma do módulo matematica e mostra o resultado.
 print(matematica.subtração(5,2)) #Chama o função subtração do módulo matematica e mostra o resultado.
 
-print(soma_dois_numeros(2, 49))
+print(soma_dois_numeros(2, 49)) #chama a função.
