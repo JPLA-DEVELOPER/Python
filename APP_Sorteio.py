@@ -16,14 +16,13 @@ while len(lista) < quantidade_numeros:
     
 print("\n-----------------RESULTADO:---------------")
 
-t = 5
+
 contador = 6 #Numero de segundos
-while t: 
-        mins, secs = divmod(t, 60) 
+while contador: 
+        mins, secs = divmod(contador, 60) 
         timer = '{:02d}:{:02d}'.format(mins, secs) 
         #print(timer, end="\r") 
         time.sleep(1) 
-        t -= 1
         contador -= 1
         print(f'Divulgação do resultado em: {contador} segundos')
 
