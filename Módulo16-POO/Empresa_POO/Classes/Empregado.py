@@ -16,20 +16,23 @@ class Empregado:
 
     def finalizar_jornada(self, nome_completo, matricula_funcional, salario):
         print(f'O empregado {nome_completo} de matricula {matricula_funcional} e salário {salario} finalizou a jornada!')
+        
 
-    def receber_aumento(self, nome_completo, matricula_funcional, salario):
-        porcentagem_de_aumento = 10
-        salario_com_aumento = (salario) + ((salario) * (porcentagem_de_aumento/100))
-
-        print(f'O empregado {nome_completo} de matricula {matricula_funcional} recebeu um aumento de {porcentagem_de_aumento} % e seu novo salário {salario_com_aumento}!')
-
+    def receber_aumento(self, nome_completo, matricula_funcional, salario): #método abstrato
+        raise NotImplementedError 
+        
 
 
 
+#empregado1 = Empregado("João","jpla@gmail.com", "848488822828", 1200)
+#desenvolvedor1 = Desenvolvedor("Java", "Maria")
 
-empregado1 = Empregado("João","jpla@gmail.com", "848488822828", "1200")
-empregado1.iniciar_jornada("João", "848488822828", 1200)
-empregado1.receber_aumento("João", "848488822828", 1200)
-empregado1.finalizar_jornada("João", "848488822828", 1200)
+#empregado1.iniciar_jornada("João", "848488822828", 1200)
+#empregado1.receber_aumento("João", "848488822828", 1200)
+#empregado1.finalizar_jornada("João", "848488822828", 1200)
+
+
+
+
 
 
