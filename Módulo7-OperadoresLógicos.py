@@ -2,6 +2,8 @@
 x = True
 y = False
 
+#0, 0.0, '' São por adrão False.
+
 print('*** IS ***')
 print(x is y)
 print( True is False)
@@ -36,7 +38,16 @@ print(not True)
 print(not False)
 
 
+#-----OPERADOR IN-------------- Verifica se o valor especificado está no interavel.
+#-----OPERADOR NOT IN-------------- Verifica se o valor especficado NÂO está no interável.
 
+nome = input('Digite seu nome: ')
+encontrar = input('Digite o que deseja encontrar: ')
+
+if encontrar in nome: #Verifica se a string encontrar está em nome.
+    print(f'{encontrar} está em {nome}')
+else:
+    print(f'{encontrar} não está em {nome}')
 
 # ------------OPERADORES DE COMPARAÇÃO ----------------------------------
 

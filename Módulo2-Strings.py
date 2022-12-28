@@ -48,6 +48,16 @@ print('444' .zfill(5)) # Completa a string até chegar em 5 caracteres com zeros
 string_extensa = 'essa string é muito grande'
 print(len(string_extensa)) # A função "len()" mostra o tamanho da string.
 
+
+#----INTEROLAÇÃO DE STRINS COM %---------------------
+#String------%s
+#Inteiro-----%i ou %d
+#Float-------%f
+#
+varialvel_de_interpolacao = 'o nome é %s e a idade é %.2f anos' %(nome, idade) # % e o tipo dedados e depois valores.
+print(varialvel_de_interpolacao)
+
+
 # ------------------ENCADEAMNTO DE FUNÇÕES ---------------------------
 print(' te;x;;to  '.strip().replace(';', '').center(25,'*').upper())
 
