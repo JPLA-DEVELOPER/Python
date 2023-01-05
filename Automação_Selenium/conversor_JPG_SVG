@@ -1,0 +1,26 @@
+from selenium import webdriver
+import time
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.common.by import By
+driver = webdriver.Chrome(ChromeDriverManager().install())
+
+#options = webdriver.ChromeOptions()
+#options.add_experimental_option('excludeSwitches', ['enable-logging'])
+#driver = webdriver.Chrome(options=options)
+
+
+driver.maximize_window()
+
+driver.get("https://www.visioncortex.org/vtracer/")
+
+
+
+driver.find_element(By.ID, "imageInput").send_keys('C:/Users/limaj/Desktop/NovaTreino/Modelo1.jpg')
+
+
+time.sleep(10)
+
+#driver.find_element('xpath', '//*[@id="export"]').click()
+driver.find_element('xpath', '//*[@id="export"]').click()
+
+time.sleep(10)
