@@ -20,6 +20,7 @@ print(resultado)
 
 
 
+
 #-----------------------------------------------------------------------------
 print('\t----------------------NOVA FUNÇÃO--------------------------\n\t')
 def calculo_media_mediana(notas): #Declara a função.
@@ -171,3 +172,50 @@ valores_produtos = { #Dicionário de itens.
 
 print(aplica_desconto(valores_produtos, 0.15)) #retorna os valores dos produtos presentes no dicionários com os descontos.
 print(aplica_baskhara(5.0, 15.0,-25.0))
+
+
+#---------------------------ARGUMENTOS NÃO NOMEADOS *ARGS----------
+#----ENPACOTAMENTO E DESCOMPACTAMENTO.
+
+x, y, *resto = 1,2,3,4 # x recebe 1, y recebe 2 e resto recebe os demais(empacota).
+print(x, y, resto)
+
+def soma(x, y, resto):
+    return x + y
+
+#-------------------------------------------------
+
+
+def somma(*args): #permite infinitos parâmetros.
+    print(args)
+
+somma(1,2,3,4,5,6)
+
+
+#----Exercício:
+#crie uma função que multiplique todos os argumentos não nomeados recebidos e retorne o total para uma variável e mostre o valor da variável.
+
+def multiplicacao(*args): #recebe um quantidade indefinida de parâmetros.
+    total = 1
+    for numero in args: #intera os parâmetros um a um.
+        total *= numero
+    return total #Retorna a multiplicação de todos os parâmentros recebidos.
+
+
+multiplicar = multiplicacao(1,2,3,4) #Passa os argumentos para a função multplicação.
+print(f'MULTIPLICAÇÃO:  {multiplicar}')
+
+#crie uma função que fala se um número é par ou ímpar:
+
+def par_impar(numero):
+    return numero % 2 == 0 #Retorna o valor da condição
+
+
+num = par_impar(3)
+print(num)
+
+
+#-----OB: não é comum dar print dentro das funções.
+#----------------------------------------------------
+
+#----------------------------------------------------
