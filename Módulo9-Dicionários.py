@@ -1,3 +1,22 @@
+
+#É uma estrutura de dados do tipo par de "chave" e "valor".
+#É mutável assim como as listas.
+#usa {} ou a classe dict para criar.
+
+
+#-MÉTODOS ÚTEIS DOS DICIONÁRIOS EM PYTHON:
+#len - contas quantas chaves tem.
+#keys - interável com as chaves.
+#values - interável com os valores.
+#items - interavel com as chaves e valores.
+#setdefault - adiciona valor se a chave não existe.
+#copy - retorna uma cópia rasa(shallow copy).Copia apenas os valores imutáveis.
+#OB:para fazer uma cópia profunda tem que usar o método "deepcopy"
+#get - obtém uma chave.
+#pop Apaga o último item adicionado.
+#update - Atualiza um dicionário com outro.
+
+
 cadastro = {  #Declara um dicionário chamado cadastro e preenche com diversos tipos de dados distintos..
 'id': 1565,
 'nome': 'João Paulo Lima',
@@ -104,5 +123,53 @@ valorr = 0 #Valor que vai ser atribuido a todas as chaves.
 
 jogo = dict.fromkeys(chavess, valorr) #Cria um dicionário a partir de lista de chaves e valores.
 print(F'Jogo: {jogo}')
+
+
+
+#----EXERCÍCIO:
+#Fazer um sistema de perguntas e respostas em python.
+
+print('-----------------------------DICIONÁRIO-----------------------------------------')
+perguntas = [
+{
+  'Pergunta': 'Quanto é 2+2?',
+  'Opcoes':['1', '2', '3', '4', '5'],
+  'Resposta': '4',
+}, 
+{
+  'Pergunta': 'Quanto é 2*2?',
+  'Opcoes':['1', '2', '3', '4', '5'],
+  'Resposta': '4',
+}, 
+
+{
+  'Pergunta': 'Quanto é 2 * 3?',
+  'Opcoes':['1', '2', '3', '4', '6'],
+  'Resposta': '6',
+},
+
+]
+
+
+
+for pergunta in perguntas: #Percorre a lista
+  print('Pergunta', pergunta ['Pergunta'])
+
+  print()
+
+  for i, opcao in enumerate(pergunta['Opcoes']): #Percorre os dicionários da lista.
+    print(f'{i}) {opcao}')
+
+    print()
+
+    escolha = input('Escolha uma opção: ')
+
+print()
+
+
+
+
+
+
 
 

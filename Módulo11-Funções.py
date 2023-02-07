@@ -218,4 +218,25 @@ print(num)
 #-----OB: não é comum dar print dentro das funções.
 #----------------------------------------------------
 
-#----------------------------------------------------
+#--------------------------EXERCÍCIO--------------------------
+#Função que duplica, triplica e quadriplica o valor recebido como parãmetro.
+
+def funcao_multipliador(multiplicador):
+    
+    def multiplicar(valor): #Função dentro de outra função.
+        return valor * multiplicador
+    return multiplicar
+
+
+duplicar = funcao_multipliador(2)#passa o argumento multiplicador
+print(duplicar(2))#Passa o argumento valor
+
+triplicar = funcao_multipliador(3)
+print(triplicar(2))
+
+quadruplicar = funcao_multipliador(4)
+print(quadruplicar(2))
+
+#--------------------------------------------------------------------------------
+
+
