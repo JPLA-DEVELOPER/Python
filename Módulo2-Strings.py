@@ -67,3 +67,6 @@ nome = 'João Paulo Lima'
 print(nome[3]) #retorna o caractere correspondente ao índice 3.
 print(nome[-1]) #Indexação negativa que retorna o indice em ordem contrária, nesse caso retornará o último elemento da string.
 print(nome[-1] == 'a') #verifica se o último elemento da string é um "a".
+
+
+

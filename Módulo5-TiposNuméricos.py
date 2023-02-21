@@ -27,3 +27,16 @@ print(float(pontuacao_int)) # Converte o inteiro para float.
 #----------------IMPORT E MÓDULO MATH ----------------------------------------------------
 # help() # faz a consuta da documentação de alguma coisa que tiver dentro do paretese.
 # import math #importa tudo o que tem dentro da biblioteca math.
+
+
+# RETORNAM FALSE:
+#dicionario =[]
+#conjunto={}
+#tupla =()
+#string = ''
+#inteiro = 0
+#flutuante = 0.0
+#nada = None
+#falso = False
+#intervalo = range(0)
+
